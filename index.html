@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Notes</title>
+  </head>
+  <body>
+    <main class="notes dark">
+      <section class="notes__list">
+        <button id="addnote">Add Note</button>
+        <ul></ul>
+      </section>
+      <section class="notes__view">
+        <div class="landing">
+          <img width="200" src="./images/logo.jfif" alt="" />
+          <!-- <p>select anote to preview here</p> -->
+        </div>
+        <div class="notes__view-body"></div>
+        <div class="notes__view-buttons hide">
+          <button id="cancel">Cancel</button>
+          <button id="delete">Delete</button>
+
+          <button id="save">Save</button>
+        </div>
+      </section>
+      <form class="form" id="hide-form" onsubmit="newNote(event)">
+        <h2>Add Note</h2>
+        <input type="text" name="title" placeholder="title" required />
+        <textarea required placeholder="note" rows="10" name="body"></textarea>
+        <button>Add</button>
+      </form>
+      <div class="overlay hide"></div>
+    </main>
+
+    <script src="./js.js"></script>
+  </body>
+</html>
